@@ -27,7 +27,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding:  1rem;
+  padding: 1rem;
   max-width: 1440px;
   margin-inline: auto;
   border: solid;
@@ -36,17 +36,18 @@ nav a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.4rem ;
+  padding: 0.4rem;
   text-decoration: none;
   border: solid 2px transparent;
   transition: border 0.3s ease-in-out;
   border-radius: 4px;
 }
-nav a:focus,nav a:hover{
+nav a:focus,
+nav a:hover {
   border: 2px solid #1dbbc3;
 }
 .btn {
-  background-color:#edf6f8 ;
+  background-color: #edf6f8;
   color: #dc3545;
   padding: 0.5rem 1rem;
   border: 5px double #dc3545;
@@ -59,8 +60,37 @@ nav a:focus,nav a:hover{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.btn:hover{
+.btn:hover {
   background-color: #dc3545;
   color: #edf6f8;
   border: 5px double #edf6f8;
+}
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.intro h1 {
+  font-size: 4rem;
+}
+.intro h1 span {
+  color: #1dbbc3;
+}
+.intro div {
+  display: grid;
+  gap: 1rem;
+  max-width: 60ch;
+}
+.intro p{
+  font-size: 1.5rem;
+  color: rgba(0,0,0,0.5);
+}
+.intro form {
+  display: grid;
+  gap: 1rem;
+  max-width: 25ch;
 }
