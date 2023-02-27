@@ -14,7 +14,6 @@ body {
   margin: 0 auto;
 }
 .layout {
-  border: solid;
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
@@ -30,7 +29,6 @@ nav {
   padding: 1rem;
   max-width: 1440px;
   margin-inline: auto;
-  border: solid;
 }
 nav a {
   display: flex;
@@ -65,6 +63,16 @@ nav a:hover {
   color: #edf6f8;
   border: 5px double #edf6f8;
 }
+.btn-dark {
+  color: #edf6f8;
+  border: 5px double #edf6f8;
+  background-color: black;
+}
+.btn-dark:hover {
+  color: black;
+  border: 5px double black;
+  background-color: #edf6f8;
+}
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -85,12 +93,28 @@ nav a:hover {
   gap: 1rem;
   max-width: 60ch;
 }
-.intro p{
+.intro p {
   font-size: 1.5rem;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .intro form {
   display: grid;
   gap: 1rem;
   max-width: 25ch;
+}
+:is(input, select) {
+  width: 100%;
+  font: inherit;
+  font-size: 1.2rem;
+  background-color: #edf6f8;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+:is(input, select):focus {
+  outline: none;
+  border-color: #1dbbc3;
+  box-shadow: 0 0 0 1px #04a1a9;
 }
