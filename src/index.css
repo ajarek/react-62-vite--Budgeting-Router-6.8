@@ -85,7 +85,7 @@ nav a:hover {
 .intro h1 {
   font-size: 4rem;
 }
-.intro h1 span {
+ h1 span {
   color: #1dbbc3;
 }
 .intro div {
@@ -118,3 +118,51 @@ nav a:hover {
   border-color: #1dbbc3;
   box-shadow: 0 0 0 1px #04a1a9;
 }
+.error {
+  place-self: center;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap:1rem;
+  text-align: center;
+}
+.error div{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  place-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.dashboard {
+  display: grid;
+  gap: 1rem;
+  place-items: start;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.form-wrapper {
+  
+  flex: 1 1 48%;
+  max-width: 800px;
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  background-color:transparent;
+  padding:2rem;
+  border-radius: 1rem;
+  box-shadow: 0.25em 0.3em 1em hsl(183 8% 55%);
+  border-top: 0.15em solid white;
+  border-left: 0.15em solid white;
+  border-right: 0.15em solid hsl(190 60% 98%);
+  border-bottom: 0.15em solid hsl(190 60% 98%);
+}
+
+.form-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0.55rem;
+  border: 2px dashed hsl( 185 26% 9%);
+  border-radius:0.5rem;
+  z-index: -1;
+}
+
