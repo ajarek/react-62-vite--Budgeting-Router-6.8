@@ -1,14 +1,27 @@
-import React from 'react'
-import { Form } from 'react-router-dom'
+import React,{useRef,useEffect} from 'react'
+import { Form, useFetcher } from 'react-router-dom'
 import {CurrencyDollarIcon} from '@heroicons/react/24/solid'
 
 const AddBudgetForm = () => {
+  const fetcher= useFetcher()
+  const isSubmitting = fetcher.state==='submitting'
+  const formRef=useRef()
+  const focusRef= useRef()
+
+useEffect(()=>{
+  if(!isSubmitting){
+    formRef.current.reset()
+    focusRef.current.focus()
+  }
+},[isSubmitting])
+
   return (
     <div className='form-wrapper'>
       <h2>Create budget</h2>
-      <Form
+      <fetcher.Form
         method='post'
         className='grid-sm'
+        ref={formRef}
       >
         <div className='grid-xs'>
           <label htmlFor='newBudget'>Budget Name</label>
@@ -18,13 +31,14 @@ const AddBudgetForm = () => {
             id='newBudget'
             placeholder='e.g.,Groceries '
             required
+            ref={focusRef}
           />
         </div>
         <div className='grid-xs'>
           <label htmlFor='newBudgetAmount'>Amount</label>
           <input
             type='number'
-            step={'0.01'}
+            step='0.01'
             name='newBudgetAmount'
             id='newBudgetAmount'
             placeholder='e.g., $350 '
@@ -32,14 +46,24 @@ const AddBudgetForm = () => {
             inputMode='decimal'
           />
         </div>
+        <input type="hidden" name='_action' value={'createBudget'} />
+        <div className='grid-xs'>
         <button
           type='submit'
           className='btn btn-dark'
+          disabled={isSubmitting}
         >
-          <span>Create budget</span>
-          <CurrencyDollarIcon width={20}/>
+          {isSubmitting?<span>Submitting...</span>:(
+            <>
+            <span>Create budget</span>
+            <CurrencyDollarIcon width={20}/>
+            </>
+          )}
+          
+          
         </button>
-      </Form>
+        </div>
+      </fetcher.Form>
     </div>
   )
 }
