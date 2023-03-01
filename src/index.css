@@ -85,7 +85,7 @@ nav a:hover {
 .intro h1 {
   font-size: 4rem;
 }
- h1 span {
+ h1 span, h2 span {
   color: #1dbbc3;
 }
 .intro div {
