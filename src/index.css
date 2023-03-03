@@ -85,6 +85,9 @@ nav a:hover {
 .intro h1 {
   font-size: 4rem;
 }
+h2{
+  margin: 16px 0;
+}
 h1 span,
 h2 span {
   color: #1dbbc3;
@@ -175,6 +178,12 @@ h2 span {
   width: 100%;
   gap: 0.5rem;
 }
+.flex-sm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 16px;
+}
 .budget {
   flex: 1 1 32.2%;
   max-width: 600px;
@@ -190,6 +199,7 @@ h2 span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 16px;
 }
 .progress-text {
   width: 100%;
@@ -215,4 +225,42 @@ progress {
   border-radius: 100vmax;
   overflow: hidden;
   transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: #edf6f8;
+}
+
+td {
+  border: none;
+  font-size: 16px;
+}
+
+thead > tr:nth-child(odd) {
+  background-color: #04a1a9;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 16px;
+}
+
+table .btn {
+  margin-inline: auto;
+}
+
+table a {
+  text-decoration: none;
+  color: black;
+  background-color: #04a1a9;
+  padding: 16px 32px;
+  border-radius: 50%;
 }
