@@ -1,7 +1,7 @@
 import React from 'react'
 import {formatCurrency,formatDataToLocaleString} from '../helpers'
 const ExpenseItem = ({expense}) => {
-  console.log(expense)
+ 
   return (
     <>
     <td>{expense.name}</td>

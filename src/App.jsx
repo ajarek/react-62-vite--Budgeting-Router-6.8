@@ -5,7 +5,7 @@ import Dashboard, { dashboardLoader, dashboardAction } from './pages/Dashboard'
 import Error from './pages/Error'
 import Main, { mainLoader } from './layouts/Main'
 import { logoutAction } from './actions/logout'
-
+//7:38 #12
 const router = createBrowserRouter([
   {
     path: '/',
